@@ -19,12 +19,16 @@ import { RouterModule } from '@angular/router';
         pathMatch: 'full'
       },
       {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'heroes',
         component: HeroesComponent
       },
       {
-        path: 'dashboard',
-        component: DashboardComponent
+        path: 'datail/:id',
+        component: HeroDetailComponent
       }
     ])
   ],
@@ -32,7 +36,7 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     DashboardComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
   ],
   providers: [
     HeroService
