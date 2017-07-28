@@ -18,11 +18,11 @@ export class DashboardComponent implements OnInit {
     ngOnInit(): void {
         // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         // Add 'implements OnInit' to the class.
-        this.getHeroesByAsyn();
+        this.getHeroes();
     }
 
-    getHeroesByAsyn(): void {
-        this.heroService.getHeroesByAsyn()
+    getHeroes(): void {
+        this.heroService.getHeroes()
             .then(heroes => this.heroes = heroes.slice(1, 5));
     }
 }
